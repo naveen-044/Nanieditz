@@ -30,7 +30,7 @@
       color: #ffc107 !important;
       font-weight: bold;
       font-size: 1.5rem;
-      display: flex;       /* Ensures image aligns nicely */
+      display: flex;
       align-items: center;
     }
 
@@ -49,14 +49,14 @@
       background: linear-gradient(210deg, #111, #000);
     }
 
-    /* UPDATED: Fixed Hero Image Styling */
+    /* UPDATED: Fixed Hero Image to be a Perfect Circle */
     .hero img {
-      width: 300px;           /* Increased width to see text clearly */
-      height: auto;           /* Maintains aspect ratio */
-      border-radius: 10px;    /* Slight curve instead of a circle */
-      object-fit: contain;    /* Ensures whole logo is visible */
+      width: 300px;
+      height: 300px;          /* Height equals width */
+      border-radius: 50%;     /* 50% radius makes a circle */
+      object-fit: cover;      /* Fills the circle nicely */
       border: 1px solid #ffc107;
-      box-shadow: 0 0 15px rgba(255, 193, 7, 0.3); /* Added gold glow */
+      box-shadow: 0 0 15px rgba(255, 193, 7, 0.3); 
     }
 
     h3 {
