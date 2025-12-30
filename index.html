@@ -213,58 +213,37 @@
   </div>
 </section>
 
-<!-- WORKS (UNCHANGED) -->
+<!-- WORKS -->
 <section id="works" class="container pb-5">
   <div class="gallery-container">
     <h3 class="text-center">Previous Works</h3>
     <div class="row g-3">
-
-      <div class="col-6 col-md-3">
-        <img class="internal-img" src="p1.jpg"
-          onerror="this.src='https://via.placeholder.com/300x533/222/ffc107?text=Work+1';">
-      </div>
-
-      <div class="col-6 col-md-3">
-        <img class="internal-img" src="p2.jpg"
-          onerror="this.src='https://via.placeholder.com/300x533/222/ffc107?text=Work+2';">
-      </div>
-
-      <div class="col-6 col-md-3">
-        <img class="internal-img" src="Gemini_Generated_Image_suwokosuwokosuwo.png"
-          onerror="this.src='https://via.placeholder.com/300x533/222/ffc107?text=Work+3';">
-      </div>
-
-      <div class="col-6 col-md-3">
-        <img class="internal-img" src="Pushpa2_1year.png"
-          onerror="this.src='https://via.placeholder.com/300x533/222/ffc107?text=Work+4';">
-      </div>
-
-      <div class="col-6 col-md-3">
-        <img class="internal-img" src="pushpa_birthday.jpg"
-          onerror="this.src='https://via.placeholder.com/300x533/222/ffc107?text=Work+5';">
-      </div>
-
-      <div class="col-6 col-md-3">
-        <img class="internal-img" src="rohit.jpg"
-          onerror="this.src='https://via.placeholder.com/300x533/222/ffc107?text=Work+6';">
-      </div>
-
+      <div class="col-6 col-md-3"><img class="internal-img" src="p1.jpg"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" src="p2.jpg"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" src="IMG_20251219_171322.jpg"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" src="Pushpa2_1year.png"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" src="pushpa_birthday.jpg"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" src="rohit.jpg"></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
+<!-- CONTACT (FIXED) -->
 <section id="contact" class="container text-center my-5">
   <h3>Contact Me</h3>
 
-  <form id="serviceForm" class="mx-auto p-4"
-    style="max-width:500px;background:#111;border:1px solid #333;border-radius:10px;">
+  <form action="https://formsubmit.co/nanieditz06@gmail.com"
+        method="POST"
+        class="mx-auto p-4"
+        style="max-width:500px;background:#111;border:1px solid #333;border-radius:10px;">
 
-    <input type="hidden" id="service" name="service">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_subject" value="New Service Request - NANIEDITZ">
+    <input type="hidden" id="service" name="Service">
 
-    <input type="text" class="form-control mb-3" name="name" placeholder="Your Name" required>
-    <input type="email" class="form-control mb-3" name="email" placeholder="Your Email" required>
-    <textarea class="form-control mb-3" rows="4" name="message"
+    <input type="text" class="form-control mb-3" name="Name" placeholder="Your Name" required>
+    <input type="email" class="form-control mb-3" name="Email" placeholder="Your Email" required>
+    <textarea class="form-control mb-3" rows="4" name="Message"
       placeholder="Describe your requirement" required></textarea>
 
     <button type="submit">Submit Request</button>
@@ -301,30 +280,6 @@
     document.getElementById("service").value = serviceName;
     document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
   }
-
-  document.getElementById("serviceForm").addEventListener("submit", async function (e) {
-    e.preventDefault();
-
-    const data = {
-      service: this.service.value,
-      name: this.name.value,
-      email: this.email.value,
-      message: this.message.value
-    };
-
-    const res = await fetch("https://YOUR-BACKEND-URL/api/request", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data)
-    });
-
-    if (res.ok) {
-      alert("Request sent successfully!");
-      this.reset();
-    } else {
-      alert("Error sending request");
-    }
-  });
 </script>
 
 </body>
