@@ -2,323 +2,303 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>NANIEDITZ - Portfolio</title>
-  <meta name="description"
-    content="Portfolio of Naveen Kumara Mallavarapu – professional visual designer.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NANIEDITZ - Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Naveen Kumara Mallavarapu – professional visual designer.">
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-    header {
-      background-color: #111;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+    header {
+      background-color: #111;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-    .navbar-brand {
-      color: #ffc107 !important;
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
+    .navbar-brand {
+      color: #ffc107 !important;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
 
-    .nav-link {
-      color: #ddd !important;
-      margin-left: 15px;
-    }
+    .nav-link {
+      color: #ddd !important;
+      margin-left: 15px;
+    }
 
-    .nav-link:hover {
-      color: #ffc107 !important;
-    }
+    .nav-link:hover {
+      color: #ffc107 !important;
+    }
 
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(210deg, #111, #000);
-    }
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      background: linear-gradient(210deg, #111, #000);
+    }
 
-    .hero img {
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 0.5px solid #ffc107;
-    }
+    .hero img {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid #ffc107;
+    }
 
-    h3 {
-      color: #ffc107;
-      border-bottom: 2px solid #333;
-      display: inline-block;
-      padding-bottom: 10px;
-      margin-bottom: 30px;
-    }
+    h3 {
+      color: #ffc107;
+      border-bottom: 2px solid #333;
+      display: inline-block;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
 
-    .about-text {
-      color: rgba(255, 255, 255, 0.75);
-      font-size: 1.05rem;
-      max-width: 700px;
-      margin: auto;
-    }
+    .about-text {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 1.05rem;
+      max-width: 700px;
+      margin: auto;
+    }
 
-    .service {
-      background: #111;
-      border: 1px solid #333;
-      border-radius: 12px;
-      padding: 25px;
-      transition: 0.3s;
-      height: 100%;
-      text-align: center;
-    }
+    .service {
+      background: #111;
+      border: 1px solid #333;
+      border-radius: 12px;
+      padding: 25px;
+      transition: 0.3s;
+      height: 100%;
+      text-align: center;
+    }
 
-    .service:hover {
-      transform: translateY(-5px);
-      border-color: #ffc107;
-    }
+    .service:hover {
+      transform: translateY(-5px);
+      border-color: #ffc107;
+    }
 
-    .gallery-container {
-      background: #111;
-      padding: 20px;
-      border-radius: 12px;
-      border: 1px solid #333;
-    }
+    .gallery-container {
+      background: #111;
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid #333;
+    }
 
-    .internal-img {
-      width: 100%;
-      aspect-ratio: 9 / 16;
-      object-fit: cover;
-      border-radius: 8px;
-      border: 1px solid #444;
-    }
+    .internal-img {
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid #444;
+    }
 
-    footer {
-      background: #111;
-      padding: 40px 20px;
-      text-align: center;
-      color: #777;
-    }
+    footer {
+      background: #111;
+      padding: 40px 20px;
+      text-align: center;
+      color: #777;
+    }
 
-    .footer-icons a {
-      color: #ffc107;
-      font-size: 24px;
-      margin: 0 15px;
-    }
+    .footer-icons a {
+      color: #ffc107;
+      font-size: 24px;
+      margin: 0 15px;
+    }
 
-    .footer-icons a:hover {
-      color: #fff;
-    }
+    .footer-icons a:hover {
+      color: #fff;
+    }
 
-    #typing-container {
-      font-size: 1.2rem;
-      color: #ccc;
-      min-height: 30px;
-    }
+    #typing-container {
+      font-size: 1.2rem;
+      color: #ccc;
+      min-height: 30px;
+    }
 
-    .cursor {
-      width: 3px;
-      height: 1em;
-      background: #ffc107;
-      display: inline-block;
-      animation: blink 1s infinite;
-    }
+    .cursor {
+      width: 3px;
+      height: 1em;
+      background: #ffc107;
+      display: inline-block;
+      animation: blink 1s infinite;
+    }
 
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-  </style>
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+  </style>
 </head>
 
 <body>
 
 <!-- NAVBAR -->
 <header>
-  <nav class="navbar navbar-expand-lg navbar-dark container">
-    <a class="navbar-brand" href="#">NANIEDITZ</a>
-    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="nav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="#works">Works</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  <nav class="navbar navbar-expand-lg navbar-dark container">
+    <a class="navbar-brand" href="#">NANIEDITZ</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="#works">Works</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 </header>
 
 <!-- HERO -->
 <section class="hero">
-  <img src="NANIEDITZ.png"
-    onerror="this.src='https://via.placeholder.com/220/ffc107/000?text=NANI';">
-  <h2>Hi, I'm NANI</h2>
-  <div id="typing-container">
-    <span id="typing-text"></span><span class="cursor"></span>
-  </div>
+  <img src="NANIEDITZ.png"
+       alt="NANIEDITZ logo"
+       onerror="this.src='https://via.placeholder.com/220/ffc107/000?text=NANI';">
+  <h2>Hi, I'm NANI</h2>
+  <div id="typing-container">
+    <span id="typing-text"></span><span class="cursor"></span>
+  </div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="container py-5 text-center">
-  <h3>About Me</h3>
-  <p class="about-text">
-    I'm a creative visual designer specializing in poster design,
-    video editing, color grading, and modern responsive web design.
-  </p>
+  <h3>About Me</h3>
+  <p class="about-text">
+    I'm a creative visual designer specializing in poster design,
+    video editing, color grading, and modern responsive web design.
+  </p>
 </section>
 
 <!-- SERVICES -->
 <section id="services" class="container pb-5">
-  <h3 class="text-center">Services</h3>
-  <div class="row g-4">
+  <h3 class="text-center">Services</h3>
+  <div class="row g-4">
 
-    <div class="col-md-4">
-      <div class="service">
-        <h4><i class="fas fa-paint-brush"></i> Poster Design</h4>
-        <p>Cinematic posters & branding.</p>
-        <button class="btn btn-warning mt-2" onclick="selectService('Poster Design')">
-          Request
-        </button>
-      </div>
-    </div>
+    <div class="col-md-4">
+      <div class="service">
+        <h4><i class="fas fa-paint-brush"></i> Poster Design</h4>
+        <p>Cinematic posters & branding.</p>
+        <button class="btn btn-warning mt-2"
+                onclick="selectService('Poster Design')">Request</button>
+      </div>
+    </div>
 
-    <div class="col-md-4">
-      <div class="service">
-        <h4><i class="fas fa-video"></i> Video Editing</h4>
-        <p>Professional video edits & color grading.</p>
-        <button class="btn btn-warning mt-2" onclick="selectService('Video Editing')">
-          Request
-        </button>
-      </div>
-    </div>
+    <div class="col-md-4">
+      <div class="service">
+        <h4><i class="fas fa-video"></i> Video Editing</h4>
+        <p>Professional video edits & color grading.</p>
+        <button class="btn btn-warning mt-2"
+                onclick="selectService('Video Editing')">Request</button>
+      </div>
+    </div>
 
-    <div class="col-md-4">
-      <div class="service">
-        <h4><i class="fas fa-code"></i> Web Development</h4>
-        <p>Responsive portfolio & business websites.</p>
-        <button class="btn btn-warning mt-2" onclick="selectService('Web Development')">
-          Request
-        </button>
-      </div>
-    </div>
+    <div class="col-md-4">
+      <div class="service">
+        <h4><i class="fas fa-code"></i> Web Development</h4>
+        <p>Responsive portfolio & business websites.</p>
+        <button class="btn btn-warning mt-2"
+                onclick="selectService('Web Development')">Request</button>
+      </div>
+    </div>
 
-  </div>
+  </div>
 </section>
 
 <!-- WORKS -->
 <section id="works" class="container pb-5">
-  <div class="gallery-container">
-    <h3 class="text-center">Previous Works</h3>
-    <div class="row g-3">
-       <div class="col-6 col-md-3"><img class="internal-img" src="nani.png"></div>
-      <div class="col-6 col-md-3"><img class="internal-img" src="p1.jpg"></div>
-      <div class="col-6 col-md-3"><img class="internal-img" src="p2.jpg"></div>
-      <div class="col-6 col-md-3"><img class="internal-img" src="Pushpa2_1year.png"></div>
-      <div class="col-6 col-md-3"><img class="internal-img" src="pushpa_birthday.jpg"></div>
-      <div class="col-6 col-md-3"><img class="internal-img" src="rohit.jpg"></div>
-      <div class="col-6 col-md-3"><img class="internal-img" src="P3.jpg"></div>
-      <div class="col-6 col-md-3"><img class="internal-img" src="pk.png"></div>
-
-    </div>
-  </div>
+  <div class="gallery-container">
+    <h3 class="text-center">Previous Works</h3>
+    <div class="row g-3">
+      <div class="col-6 col-md-3">
+        <img class="internal-img" loading="lazy" src="nani.png" alt="Work"
+             onerror="this.src='https://via.placeholder.com/300x533/222/ffc107';">
+      </div>
+      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="p1.jpg"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="p2.jpg"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="Pushpa2_1year.png"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="pushpa_birthday.jpg"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="rohit.jpg"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="P3.jpg"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="pk.png"></div>
+    </div>
+  </div>
 </section>
 
-<!-- CONTACT (FIXED) -->
+<!-- CONTACT -->
 <section id="contact" class="container text-center my-5">
-  <h3>Contact Me</h3>
+  <h3>Contact Me</h3>
 
-  <form action="https://formsubmit.co/nanieditz06@gmail.com"
-      method="POST"
-      class="mx-auto p-4"
-      style="max-width:500px;background:#111;border:1px solid #333;border-radius:10px;">
+  <form action="https://formsubmit.co/nanieditz06@gmail.com"
+        method="POST"
+        class="mx-auto p-4"
+        style="max-width:500px;background:#111;border:1px solid #333;border-radius:10px;">
 
-  <!-- IMPORTANT FIXES -->
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_next"
+           value="https://naveen-044.github.io/Nanieditz/?success=1#contact">
+    <input type="hidden" id="service" name="Service">
 
-  <!-- 🔥 Redirect BACK to your site -->
-  <input type="hidden" name="_next" value="https://naveen-044.github.io/Nanieditz/#contact">
+    <input type="text" class="form-control mb-3" name="Name"
+           placeholder="Your Name" required>
+    <input type="email" class="form-control mb-3" name="Email"
+           placeholder="Your Email" required>
+    <textarea class="form-control mb-3" rows="4"
+              name="Message" placeholder="Describe your requirement" required></textarea>
 
-  <input type="hidden" id="service" name="Service">
+    <button type="submit">Submit Request</button>
+  </form>
 
-  <input type="text" class="form-control mb-3"
-         name="Name" placeholder="Your Name" required>
-
-  <input type="email" class="form-control mb-3"
-         name="Email" placeholder="Your Email" required>
-
-  <textarea class="form-control mb-3" rows="4"
-            name="Message" placeholder="Describe your requirement" required></textarea>
-
-  <button type="submit">Submit Request</button>
-</form>
-<p id="successMsg" style="display:none;color:#28a745;margin-top:15px;">
-  ✅ Your message has been sent successfully!
-</p>
-
+  <p id="successMsg" style="display:none;color:#28a745;margin-top:15px;">
+    ✅ Your message has been sent successfully!
+  </p>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <div class="footer-icons">
-    <a href="https://github.com/naveen-044" target="_blank"><i class="fab fa-github"></i></a>
-    <a href="https://instagram.com/nanieditz_06" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <p class="mt-3">© 2025 Naveen Kumara Mallavarapu</p>
+  <div class="footer-icons">
+    <a href="https://github.com/naveen-044" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://instagram.com/nanieditz_06" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <p class="mt-3">© 2025 Naveen Kumara Mallavarapu</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
 
-    /* ===== Typing Effect ===== */
-    const text = "Poster Designer | Video Editor | Web Developer";
-    let i = 0;
-    const typing = document.getElementById("typing-text");
+    const text = "Poster Designer | Video Editor | Web Developer";
+    let i = 0;
+    const typing = document.getElementById("typing-text");
 
-    function typeEffect() {
-      if (typing && i < text.length) {
-        typing.textContent += text.charAt(i);
-        i++;
-        setTimeout(typeEffect, 80);
-      }
-    }
-    setTimeout(typeEffect, 500);
+    function typeEffect() {
+      if (typing && i < text.length) {
+        typing.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 80);
+      }
+    }
+    setTimeout(typeEffect, 500);
 
-    /* ===== Service Selection ===== */
-    window.selectService = function (serviceName) {
-      const serviceInput = document.getElementById("service");
-      const contactSection = document.getElementById("contact");
+    window.selectService = function (serviceName) {
+      document.getElementById("service").value = serviceName;
+      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    };
 
-      if (serviceInput) {
-        serviceInput.value = serviceName;
-      }
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-
-    /* ===== Success Message After Submit ===== */
-    if (window.location.hash === "#contact") {
-      const successMsg = document.getElementById("successMsg");
-      if (successMsg) {
-        successMsg.style.display = "block";
-      }
-    }
-
-  });
+    if (window.location.search.includes("success=1")) {
+      document.getElementById("successMsg").style.display = "block";
+    }
+  });
 </script>
-
 
 </body>
 </html>
