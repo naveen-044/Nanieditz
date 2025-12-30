@@ -5,8 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NANIEDITZ - Portfolio</title>
-  <meta name="description"
-    content="Portfolio of Naveen Kumara Mallavarapu – professional visual designer.">
+  <meta name="description" content="Portfolio of Naveen Kumara Mallavarapu – professional visual designer.">
+
+  <link rel="icon" type="image/png" href="NANIEDITZ.png">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -29,6 +30,8 @@
       color: #ffc107 !important;
       font-weight: bold;
       font-size: 1.5rem;
+      display: flex;       /* Ensures image aligns nicely */
+      align-items: center;
     }
 
     .nav-link {
@@ -42,14 +45,18 @@
 
     .hero {
       text-align: center;
-      padding: 90px 20px;
+      padding: 80px 20px;
       background: linear-gradient(210deg, #111, #000);
     }
 
-    .logo-wrapper {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
+    /* UPDATED: Fixed Hero Image Styling */
+    .hero img {
+      width: 300px;           /* Increased width to see text clearly */
+      height: auto;           /* Maintains aspect ratio */
+      border-radius: 10px;    /* Slight curve instead of a circle */
+      object-fit: contain;    /* Ensures whole logo is visible */
+      border: 1px solid #ffc107;
+      box-shadow: 0 0 15px rgba(255, 193, 7, 0.3); /* Added gold glow */
     }
 
     h3 {
@@ -136,10 +143,12 @@
 
 <body>
 
-<!-- NAVBAR -->
 <header>
   <nav class="navbar navbar-expand-lg navbar-dark container">
-    <a class="navbar-brand" href="#">NANIEDITZ</a>
+    <a class="navbar-brand" href="#">
+      <img src="NANIEDITZ.png" alt="NaniEditz Logo" style="height: 50px; width: auto;">
+    </a>
+    
     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -154,45 +163,15 @@
   </nav>
 </header>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="logo-wrapper">
-    <svg width="260" height="260" viewBox="0 0 320 320">
-      <defs>
-        <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#fff2b2"/>
-          <stop offset="50%" stop-color="#ffc107"/>
-          <stop offset="100%" stop-color="#b8860b"/>
-        </linearGradient>
-      </defs>
-
-      <path d="M80 70 A110 110 0 0 1 240 70"
-            fill="none" stroke="url(#gold)"
-            stroke-width="4" stroke-linecap="round"/>
-
-      <path d="M240 250 A110 110 0 0 1 80 250"
-            fill="none" stroke="url(#gold)"
-            stroke-width="4" stroke-linecap="round"/>
-
-      <text x="160" y="140" text-anchor="middle"
-            fill="url(#gold)" font-size="42"
-            font-family="cursive">The</text>
-
-      <text x="160" y="185" text-anchor="middle"
-            fill="url(#gold)" font-size="36"
-            font-weight="700" letter-spacing="4">
-        NANIEDITZ
-      </text>
-    </svg>
-  </div>
-
+  <img src="NANIEDITZ.png" alt="NaniEditz Hero Logo">
+  
   <h2>Hi, I'm NANI</h2>
   <div id="typing-container">
     <span id="typing-text"></span><span class="cursor"></span>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="container py-5 text-center">
   <h3>About Me</h3>
   <p class="about-text">
@@ -201,15 +180,17 @@
   </p>
 </section>
 
-<!-- SERVICES -->
 <section id="services" class="container pb-5">
   <h3 class="text-center">Services</h3>
   <div class="row g-4">
+
     <div class="col-md-4">
       <div class="service">
         <h4><i class="fas fa-paint-brush"></i> Poster Design</h4>
         <p>Cinematic posters & branding.</p>
-        <button class="btn btn-warning mt-2" onclick="selectService('Poster Design')">Request</button>
+        <button class="btn btn-warning mt-2" onclick="selectService('Poster Design')">
+          Request
+        </button>
       </div>
     </div>
 
@@ -217,7 +198,9 @@
       <div class="service">
         <h4><i class="fas fa-video"></i> Video Editing</h4>
         <p>Professional video edits & color grading.</p>
-        <button class="btn btn-warning mt-2" onclick="selectService('Video Editing')">Request</button>
+        <button class="btn btn-warning mt-2" onclick="selectService('Video Editing')">
+          Request
+        </button>
       </div>
     </div>
 
@@ -225,56 +208,62 @@
       <div class="service">
         <h4><i class="fas fa-code"></i> Web Development</h4>
         <p>Responsive portfolio & business websites.</p>
-        <button class="btn btn-warning mt-2" onclick="selectService('Web Development')">Request</button>
+        <button class="btn btn-warning mt-2" onclick="selectService('Web Development')">
+          Request
+        </button>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- WORKS -->
 <section id="works" class="container pb-5">
   <div class="gallery-container">
     <h3 class="text-center">Previous Works</h3>
     <div class="row g-3">
-      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="nani.png"></div>
-      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="p1.jpg"></div>
-      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="p2.jpg"></div>
-      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="Pushpa2_1year.png"></div>
-      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="pushpa_birthday.jpg"></div>
-      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="rohit.jpg"></div>
-      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="P3.jpg"></div>
-      <div class="col-6 col-md-3"><img class="internal-img" loading="lazy" src="pk.png"></div>
+       <div class="col-6 col-md-3"><img class="internal-img" src="nani.png"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" src="p1.jpg"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" src="p2.jpg"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" src="Pushpa2_1year.png"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" src="pushpa_birthday.jpg"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" src="rohit.jpg"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" src="P3.jpg"></div>
+      <div class="col-6 col-md-3"><img class="internal-img" src="pk.png"></div>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="container text-center my-5">
   <h3>Contact Me</h3>
 
-  <form action="https://formsubmit.co/nanieditz06@gmail.com" method="POST"
-        class="mx-auto p-4"
-        style="max-width:500px;background:#111;border:1px solid #333;border-radius:10px;">
+  <form action="https://formsubmit.co/nanieditz06@gmail.com"
+      method="POST"
+      class="mx-auto p-4"
+      style="max-width:500px;background:#111;border:1px solid #333;border-radius:10px;">
 
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://naveen-044.github.io/Nanieditz/#contact">
-    <input type="hidden" id="service" name="Service">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+  <input type="hidden" name="_next" value="https://naveen-044.github.io/Nanieditz/#contact">
 
-    <input type="text" class="form-control mb-3" name="Name" placeholder="Your Name" required>
-    <input type="email" class="form-control mb-3" name="Email" placeholder="Your Email" required>
-    <textarea class="form-control mb-3" rows="4" name="Message"
-              placeholder="Describe your requirement" required></textarea>
+  <input type="hidden" id="service" name="Service">
 
-    <button type="submit">Submit Request</button>
-  </form>
+  <input type="text" class="form-control mb-3"
+         name="Name" placeholder="Your Name" required>
 
-  <p id="successMsg" style="display:none;color:#28a745;margin-top:15px;">
-    ✅ Your message has been sent successfully!
-  </p>
+  <input type="email" class="form-control mb-3"
+         name="Email" placeholder="Your Email" required>
+
+  <textarea class="form-control mb-3" rows="4"
+            name="Message" placeholder="Describe your requirement" required></textarea>
+
+  <button type="submit" class="btn btn-warning w-100">Submit Request</button>
+</form>
+<p id="successMsg" style="display:none;color:#28a745;margin-top:15px;">
+  ✅ Your message has been sent successfully!
+</p>
+
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-icons">
     <a href="https://github.com/naveen-044" target="_blank"><i class="fab fa-github"></i></a>
@@ -289,6 +278,7 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
 
+    /* ===== Typing Effect ===== */
     const text = "Poster Designer | Video Editor | Web Developer";
     let i = 0;
     const typing = document.getElementById("typing-text");
@@ -302,14 +292,27 @@
     }
     setTimeout(typeEffect, 500);
 
+    /* ===== Service Selection ===== */
     window.selectService = function (serviceName) {
-      document.getElementById("service").value = serviceName;
-      document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+      const serviceInput = document.getElementById("service");
+      const contactSection = document.getElementById("contact");
+
+      if (serviceInput) {
+        serviceInput.value = serviceName;
+      }
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
     };
 
+    /* ===== Success Message After Submit ===== */
     if (window.location.hash === "#contact") {
-      document.getElementById("successMsg").style.display = "block";
+      const successMsg = document.getElementById("successMsg");
+      if (successMsg) {
+        successMsg.style.display = "block";
+      }
     }
+
   });
 </script>
 
