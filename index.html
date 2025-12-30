@@ -233,21 +233,34 @@
   <h3>Contact Me</h3>
 
   <form action="https://formsubmit.co/nanieditz06@gmail.com"
-        method="POST"
-        class="mx-auto p-4"
-        style="max-width:500px;background:#111;border:1px solid #333;border-radius:10px;">
+      method="POST"
+      class="mx-auto p-4"
+      style="max-width:500px;background:#111;border:1px solid #333;border-radius:10px;">
 
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_subject" value="New Service Request - NANIEDITZ">
-    <input type="hidden" id="service" name="Service">
+  <!-- IMPORTANT FIXES -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
 
-    <input type="text" class="form-control mb-3" name="Name" placeholder="Your Name" required>
-    <input type="email" class="form-control mb-3" name="Email" placeholder="Your Email" required>
-    <textarea class="form-control mb-3" rows="4" name="Message"
-      placeholder="Describe your requirement" required></textarea>
+  <!-- 🔥 Redirect BACK to your site -->
+  <input type="hidden" name="_next" value="https://naveen-044.github.io/Nanieditz/#contact">
 
-    <button type="submit">Submit Request</button>
-  </form>
+  <input type="hidden" id="service" name="Service">
+
+  <input type="text" class="form-control mb-3"
+         name="Name" placeholder="Your Name" required>
+
+  <input type="email" class="form-control mb-3"
+         name="Email" placeholder="Your Email" required>
+
+  <textarea class="form-control mb-3" rows="4"
+            name="Message" placeholder="Describe your requirement" required></textarea>
+
+  <button type="submit">Submit Request</button>
+</form>
+<p id="successMsg" style="display:none;color:#28a745;margin-top:15px;">
+  ✅ Your message has been sent successfully!
+</p>
+
 </section>
 
 <!-- FOOTER -->
@@ -263,24 +276,46 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-  const text = "Poster Designer | Video Editor | Web Developer";
-  let i = 0;
-  const typing = document.getElementById("typing-text");
+  document.addEventListener("DOMContentLoaded", function () {
 
-  function typeEffect() {
-    if (i < text.length) {
-      typing.textContent += text.charAt(i);
-      i++;
-      setTimeout(typeEffect, 80);
+    /* ===== Typing Effect ===== */
+    const text = "Poster Designer | Video Editor | Web Developer";
+    let i = 0;
+    const typing = document.getElementById("typing-text");
+
+    function typeEffect() {
+      if (typing && i < text.length) {
+        typing.textContent += text.charAt(i);
+        i++;
+        setTimeout(typeEffect, 80);
+      }
     }
-  }
-  setTimeout(typeEffect, 500);
+    setTimeout(typeEffect, 500);
 
-  function selectService(serviceName) {
-    document.getElementById("service").value = serviceName;
-    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-  }
+    /* ===== Service Selection ===== */
+    window.selectService = function (serviceName) {
+      const serviceInput = document.getElementById("service");
+      const contactSection = document.getElementById("contact");
+
+      if (serviceInput) {
+        serviceInput.value = serviceName;
+      }
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    /* ===== Success Message After Submit ===== */
+    if (window.location.hash === "#contact") {
+      const successMsg = document.getElementById("successMsg");
+      if (successMsg) {
+        successMsg.style.display = "block";
+      }
+    }
+
+  });
 </script>
+
 
 </body>
 </html>
